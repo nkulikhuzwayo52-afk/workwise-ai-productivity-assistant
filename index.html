@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="WorkWise AI - AI-Powered Workplace Productivity Assistant">
+
+    <title>WorkWise AI | Workplace Productivity Assistant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MOBILE HEADER
+    ========================== -->
+    <header class="mobile-header">
+        <button class="menu-button" id="menuButton" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <div class="mobile-logo">
+            <span class="logo-icon">W</span>
+            <span>WorkWise AI</span>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">W</div>
+
+            <div>
+                <h2>WorkWise AI</h2>
+                <span>Productivity Assistant</span>
+            </div>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+
+            <a href="#dashboard" class="nav-link active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#email" class="nav-link">
+                <span>✉</span>
+                Email Generator
+            </a>
+
+            <a href="#meeting" class="nav-link">
+                <span>▤</span>
+                Meeting Summarizer
+            </a>
+
+            <a href="#tasks" class="nav-link">
+                <span>✓</span>
+                Task Planner
+            </a>
+
+            <a href="#research" class="nav-link">
+                <span>⌕</span>
+                Research Assistant
+            </a>
+
+            <a href="#chatbot" class="nav-link">
+                <span>◉</span>
+                AI Chatbot
+            </a>
+
+            <a href="#prompts" class="nav-link">
+                <span>✦</span>
+                Prompt Engineering
+            </a>
+
+            <a href="#responsible-ai" class="nav-link">
+                <span>◆</span>
+                Responsible AI
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <strong>AI Skills Project</strong>
+            <p>Work smarter with responsible AI.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content" id="mainContent">
+
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+        <section id="dashboard" class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">AI-POWERED WORKPLACE PRODUCTIVITY</span>
+
+                <h1>
+                    WorkWise <span>AI</span>
+                </h1>
+
+                <h2>AI-Powered Workplace Productivity Assistant</h2>
+
+                <p>
+                    Work smarter, communicate better, and organise your work with AI.
+                </p>
+
+                <p class="hero-description">
+                    WorkWise AI is an AI-powered productivity assistant designed to
+                    support workplace communication, planning, research, meeting
+                    management, and everyday productivity.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#tools" class="primary-button">
+                        Explore AI Tools
+                    </a>
+
+                    <a href="#responsible-ai" class="secondary-button">
+                        Responsible AI
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK STATS
+        ========================== -->
+        <section class="stats-section" id="tools">
+
+            <div class="stat-card">
+                <div class="stat-icon">✉</div>
+                <div>
+                    <strong>5</strong>
+                    <span>AI Productivity Tools</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✦</div>
+                <div>
+                    <strong>3+</strong>
+                    <span>Prompt Examples</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">◆</div>
+                <div>
+                    <strong>100%</strong>
+                    <span>Human Verification</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AI TOOLS
+        ========================== -->
+        <section class="content-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">PRODUCTIVITY TOOLS</span>
+                <h2>AI Tools for Everyday Work</h2>
+                <p>
+                    Select a tool below to improve communication, planning,
+                    research, and workplace productivity.
+                </p>
+            </div>
+
+
+            <!-- EMAIL GENERATOR -->
+            <article class="tool-card" id="email">
+
+                <div class="tool-header">
+                    <div class="tool-icon">✉</div>
+
+                    <div>
+                        <span class="tool-number">01</span>
+                        <h3>Smart Email Generator</h3>
+                        <p>Create professional workplace emails in seconds.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label for="emailPurpose">
+                            What is the purpose of the email?
+                        </label>
+
+                        <textarea
+                            id="emailPurpose"
+                            rows="5"
+                            placeholder="Example: Ask my manager for permission to attend a training workshop."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="emailTone">
+                            Select tone
+                        </label>
+
+                        <select id="emailTone">
+                            <option value="Professional">Professional</option>
+                            <option value="Friendly">Friendly</option>
+                            <option value="Formal">Formal</option>
+                            <option value="Concise">Concise</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button class="primary-button generate-button"
+                            id="generateEmail">
+                        Generate Email
+                    </button>
+
+                    <button class="secondary-button"
+                            id="resetEmail">
+                        Reset
+                    </button>
+
+                    <button class="copy-button"
+                            data-target="emailOutput">
+                        Copy
+                    </button>
+
+                </div>
+
+                <div class="loading" id="emailLoading">
+                    <span class="spinner"></span>
+                    Generating your email...
+                </div>
+
+                <div class="output-box">
+
+                    <div class="output-title">
+                        <span>Generated Email</span>
+                    </div>
+
+                    <div id="emailOutput" class="output-content">
+                        Your generated email will appear here.
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MEETING SUMMARIZER -->
+            <article class="tool-card" id="meeting">
+
+                <div class="tool-header">
+
+                    <div class="tool-icon">▤</div>
+
+                    <div>
+                        <span class="tool-number">02</span>
+                        <h3>Meeting Notes Summarizer</h3>
+                        <p>Turn lengthy meeting notes into clear action points.</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="meetingNotes">
+                        Paste your meeting notes
+                    </label>
+
+                    <textarea
+                        id="meetingNotes"
+                        rows="9"
+                        placeholder="Paste your meeting notes here..."
+                    ></textarea>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button class="primary-button"
+                            id="generateMeeting">
+                        Summarize Meeting
+                    </button>
+
+                    <button class="secondary-button"
+                            id="resetMeeting">
+                        Reset
+                    </button>
+
+                    <button class="copy-button"
+                            data-target="meetingOutput">
+                        Copy
+                    </button>
+
+                </div>
+
+                <div class="loading" id="meetingLoading">
+                    <span class="spinner"></span>
+                    Analysing meeting notes...
+                </div>
+
+                <div class="output-box">
+
+                    <div class="output-title">
+                        <span>Meeting Summary</span>
+                    </div>
+
+                    <div id="meetingOutput" class="output-content">
+                        Your meeting summary will appear here.
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TASK PLANNER -->
+            <article class="tool-card" id="tasks">
+
+                <div class="tool-header">
+
+                    <div class="tool-icon">✓</div>
+
+                    <div>
+                        <span class="tool-number">03</span>
+                        <h3>AI Task Planner</h3>
+                        <p>Organise goals and tasks into an actionable plan.</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="taskInput">
+                        Enter your goal or list of tasks
+                    </label>
+
+                    <textarea
+                        id="taskInput"
+                        rows="7"
+                        placeholder="Example: Complete my project report, prepare presentation, send email to supervisor..."
+                    ></textarea>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button class="primary-button"
+                            id="generateTasks">
+                        Create Task Plan
+                    </button>
+
+                    <button class="secondary-button"
+                            id="resetTasks">
+                        Reset
+                    </button>
+
+                    <button class="copy-button"
+                            data-target="taskOutput">
+                        Copy
+                    </button>
+
+                </div>
+
+                <div class="loading" id="taskLoading">
+                    <span class="spinner"></span>
+                    Organising your tasks...
+                </div>
+
+                <div class="output-box">
+
+                    <div class="output-title">
+                        <span>Recommended Task Plan</span>
+                    </div>
+
+                    <div id="taskOutput" class="output-content">
+                        Your task plan will appear here.
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- RESEARCH ASSISTANT -->
+            <article class="tool-card" id="research">
+
+                <div class="tool-header">
+
+                    <div class="tool-icon">⌕</div>
+
+                    <div>
+                        <span class="tool-number">04</span>
+                        <h3>AI Research Assistant</h3>
+                        <p>Structure workplace research and improve your research process.</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="researchTopic">
+                        Research topic or workplace question
+                    </label>
+
+                    <textarea
+                        id="researchTopic"
+                        rows="6"
+                        placeholder="Example: How can artificial intelligence improve productivity in the workplace?"
+                    ></textarea>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button class="primary-button"
+                            id="generateResearch">
+                        Generate Research Guide
+                    </button>
+
+                    <button class="secondary-button"
+                            id="resetResearch">
+                        Reset
+                    </button>
+
+                    <button class="copy-button"
+                            data-target="researchOutput">
+                        Copy
+                    </button>
+
+                </div>
+
+                <div class="loading" id="researchLoading">
+                    <span class="spinner"></span>
+                    Preparing research guidance...
+                </div>
+
+                <div class="output-box">
+
+                    <div class="output-title">
+                        <span>Research Guide</span>
+                    </div>
+
+                    <div id="researchOutput" class="output-content">
+                        Your research guide will appear here.
+                    </div>
+
+                </div>
+
+                <div class="verification-notice">
+                    <strong>Verification reminder:</strong>
+                    AI-generated information may be inaccurate or incomplete.
+                    Always verify important information using reliable sources
+                    before using it as factual information.
+                </div>
+
+            </article>
+
+
+            <!-- CHATBOT -->
+            <article class="tool-card chatbot-card" id="chatbot">
+
+                <div class="tool-header">
+
+                    <div class="tool-icon">◉</div>
+
+                    <div>
+                        <span class="tool-number">05</span>
+                        <h3>Workplace AI Chatbot</h3>
+                        <p>Ask questions about workplace productivity and everyday office tasks.</p>
+                    </div>
+
+                </div>
+
+                <div class="chat-warning">
+                    Do not enter passwords, confidential company information,
+                    financial information, or sensitive personal information.
+                </div>
+
+                <div class="chat-window" id="chatWindow">
+
+                    <div class="bot-message">
+                        <strong>WorkWise AI</strong>
+                        <p>
+                            Hello! I can help with workplace writing, planning,
+                            brainstorming, productivity, communication and general
+                            office tasks. How can I help?
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="chat-input-area">
+
+                    <label for="chatInput" class="sr-only">
+                        Ask WorkWise AI a question
+                    </label>
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask a workplace productivity question..."
+                    >
+
+                    <button class="primary-button"
+                            id="sendChat">
+                        Send
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             PROMPT ENGINEERING
+        ========================== -->
+        <section class="content-section" id="prompts">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">PROMPT ENGINEERING</span>
+
+                <h2>Write Better Prompts</h2>
+
+                <p>
+                    Effective prompts give AI clear instructions, useful context,
+                    specific requirements and a desired output format.
+                </p>
+
+            </div>
+
+            <div class="prompt-structure">
+
+                <div class="structure-item">
+                    <strong>Role</strong>
+                    <span>Tell AI who it should act as.</span>
+                </div>
+
+                <div class="structure-item">
+                    <strong>Task</strong>
+                    <span>Clearly explain what you want it to do.</span>
+                </div>
+
+                <div class="structure-item">
+                    <strong>Context</strong>
+                    <span>Provide relevant background information.</span>
+                </div>
+
+                <div class="structure-item">
+                    <strong>Requirements</strong>
+                    <span>Specify important conditions or limitations.</span>
+                </div>
+
+                <div class="structure-item">
+                    <strong>Output Format</strong>
+                    <span>Explain how the response should be structured.</span>
+                </div>
+
+            </div>
+
+
+            <div class="prompt-card">
+
+                <span class="prompt-label">01 — EMAIL GENERATION</span>
+
+                <p>
+                    Act as a professional workplace communication assistant.
+                    Write an email to my manager requesting permission to attend
+                    a professional development workshop. The workshop takes
+                    place next Friday and will improve my workplace skills.
+                    Use a professional and respectful tone. Include a subject
+                    line, greeting, clear request, short explanation and
+                    professional closing.
+                </p>
+
+            </div>
+
+
+            <div class="prompt-card">
+
+                <span class="prompt-label">02 — MEETING SUMMARISATION</span>
+
+                <p>
+                    Act as a professional meeting assistant. Summarise the
+                    meeting notes provided below. Identify the main discussion
+                    points, decisions, action items, responsible persons and
+                    deadlines when they are mentioned. Present the information
+                    using clear headings and bullet points.
+                </p>
+
+            </div>
+
+
+            <div class="prompt-card">
+
+                <span class="prompt-label">03 — TASK PLANNING</span>
+
+                <p>
+                    Act as a workplace productivity coach. Organise the following
+                    list of tasks into a practical action plan. Identify urgent,
+                    important and lower-priority tasks. Recommend the best order
+                    for completing them and suggest realistic deadlines. Present
+                    the result in a clear table.
+                </p>
+
+            </div>
+
+
+            <div class="why-prompts">
+
+                <h3>Why do specific prompts produce better results?</h3>
+
+                <p>
+                    Specific prompts reduce ambiguity and give the AI clearer
+                    instructions. Providing a role, task, context, requirements
+                    and output format helps produce responses that are more
+                    relevant, consistent and useful.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESPONSIBLE AI
+        ========================== -->
+        <section class="content-section responsible-section"
+                 id="responsible-ai">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">RESPONSIBLE AI</span>
+
+                <h2>Use AI Responsibly</h2>
+
+                <p>
+                    AI can improve productivity, but human judgement and
+                    responsible use remain essential.
+                </p>
+
+            </div>
+
+            <div class="responsible-grid">
+
+                <div class="responsible-card">
+                    <h3>Human Verification</h3>
+                    <p>
+                        Always review and verify AI-generated information before
+                        using it professionally.
+                    </p>
+                </div>
+
+                <div class="responsible-card">
+                    <h3>Accuracy</h3>
+                    <p>
+                        AI can produce inaccurate, incomplete or outdated
+                        information. Important facts should be checked.
+                    </p>
+                </div>
+
+                <div class="responsible-card">
+                    <h3>Protect Information</h3>
+                    <p>
+                        Never enter passwords, confidential company information,
+                        financial information or sensitive personal information.
+                    </p>
+                </div>
+
+                <div class="responsible-card">
+                    <h3>Privacy</h3>
+                    <p>
+                        Protect personal information and only provide information
+                        that is necessary for the task.
+                    </p>
+                </div>
+
+                <div class="responsible-card">
+                    <h3>Human Judgement</h3>
+                    <p>
+                        AI should support human decision-making rather than
+                        replace human judgement.
+                    </p>
+                </div>
+
+                <div class="responsible-card">
+                    <h3>Fairness</h3>
+                    <p>
+                        Do not use AI to make unfair or discriminatory decisions
+                        about people.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+        <footer class="footer">
+
+            <div>
+                <strong>WorkWise AI</strong>
+                <p>AI-Powered Workplace Productivity Assistant</p>
+            </div>
+
+            <p>
+                Built as an AI Skills Program project.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
